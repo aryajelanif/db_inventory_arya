@@ -18,7 +18,7 @@
         <label for="">NAMA JENIS</label>
         <input type="text" name="nama_jenis" class="form-control" id="jenis">
         <br>
-        <button type="submit">Simpan</button>
+        <button type="submit" class="btn btn-primary">Simpan</button>
     </form>
    
 </form>

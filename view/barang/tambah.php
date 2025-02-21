@@ -27,7 +27,7 @@
         <label for="">STOK</label>
         <input type="text" name="stok" class="form-control" id="stok">
         <br>
-        <button type="submit">Simpan</button>
+        <button type="submit" class="btn btn-primary">Simpan</button>
     </form>
    
 </form>

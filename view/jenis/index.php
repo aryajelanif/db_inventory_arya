@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <title>DATA BARANG</title>
 </head>
 <body>
@@ -47,7 +48,9 @@
     
     
     <h1>Data Jenis</h1>
-    <a href="tambah.php" class="btn btn-primary">Tambah Jenis Baru</a>
+    <a href="tambah.php" class="btn btn-primary"><i class="fa-solid fa-square-plus">
+
+    </i>Tambah Jenis Baru</a>
     <table border="1" class="table table-dark table-striped">
         <tr>
             <th>NO</th>
@@ -60,7 +63,7 @@
              $query = mysqli_query($conn, "SELECT * FROM jenis");
              $no=1;
              if(mysqli_num_rows($query)){
-               
+               echo "";
                 while($result=mysqli_fetch_assoc($query)){
                 ?>   
                 <tr>
@@ -68,8 +71,9 @@
                     <td><?php echo $result['id_jenis'] ?></td>
                     <td><?php echo $result['nama_jenis'] ?></td>
                     <td>
-                        <a href="" class="btn btn-warning">Edit </a>
-                        <a href="" class="btn btn-danger">Hapus </a>
+                        <a href="view_edit.php?id_jenis=<?php echo $result ['id_jenis']?>
+                        " class="btn btn-warning"><i class="fa-solid fa-pen-to-square"></i>Edit </a>
+                   
                     </td>
                 </tr>
                 <?php
@@ -81,5 +85,6 @@
             ?>
     </table>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
